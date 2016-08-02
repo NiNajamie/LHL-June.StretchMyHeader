@@ -1,0 +1,306 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		96752B861D51175A00CCB3D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96752B851D51175A00CCB3D9 /* AppDelegate.swift */; };
+		96752B881D51175A00CCB3D9 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96752B871D51175A00CCB3D9 /* MasterViewController.swift */; };
+		96752B8A1D51175A00CCB3D9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96752B891D51175A00CCB3D9 /* DetailViewController.swift */; };
+		96752B8D1D51175A00CCB3D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96752B8B1D51175A00CCB3D9 /* Main.storyboard */; };
+		96752B8F1D51175A00CCB3D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96752B8E1D51175A00CCB3D9 /* Assets.xcassets */; };
+		96752B921D51175A00CCB3D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96752B901D51175A00CCB3D9 /* LaunchScreen.storyboard */; };
+		96752B9A1D51177700CCB3D9 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96752B991D51177700CCB3D9 /* NewsTableViewCell.swift */; };
+		96752B9C1D511ADB00CCB3D9 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96752B9B1D511ADB00CCB3D9 /* News.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		96752B821D51175A00CCB3D9 /* LHL-June.StretchMyHeader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LHL-June.StretchMyHeader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96752B851D51175A00CCB3D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		96752B871D51175A00CCB3D9 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		96752B891D51175A00CCB3D9 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		96752B8C1D51175A00CCB3D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		96752B8E1D51175A00CCB3D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		96752B911D51175A00CCB3D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		96752B931D51175A00CCB3D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96752B991D51177700CCB3D9 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		96752B9B1D511ADB00CCB3D9 /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		96752B7F1D51175A00CCB3D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		96752B791D51175A00CCB3D9 = {
+			isa = PBXGroup;
+			children = (
+				96752B841D51175A00CCB3D9 /* LHL-June.StretchMyHeader */,
+				96752B831D51175A00CCB3D9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		96752B831D51175A00CCB3D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96752B821D51175A00CCB3D9 /* LHL-June.StretchMyHeader.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96752B841D51175A00CCB3D9 /* LHL-June.StretchMyHeader */ = {
+			isa = PBXGroup;
+			children = (
+				96752B851D51175A00CCB3D9 /* AppDelegate.swift */,
+				96752B891D51175A00CCB3D9 /* DetailViewController.swift */,
+				96752B871D51175A00CCB3D9 /* MasterViewController.swift */,
+				96752B991D51177700CCB3D9 /* NewsTableViewCell.swift */,
+				96752B9B1D511ADB00CCB3D9 /* News.swift */,
+				96752B8B1D51175A00CCB3D9 /* Main.storyboard */,
+				96752B8E1D51175A00CCB3D9 /* Assets.xcassets */,
+				96752B901D51175A00CCB3D9 /* LaunchScreen.storyboard */,
+				96752B931D51175A00CCB3D9 /* Info.plist */,
+			);
+			path = "LHL-June.StretchMyHeader";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		96752B811D51175A00CCB3D9 /* LHL-June.StretchMyHeader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96752B961D51175A00CCB3D9 /* Build configuration list for PBXNativeTarget "LHL-June.StretchMyHeader" */;
+			buildPhases = (
+				96752B7E1D51175A00CCB3D9 /* Sources */,
+				96752B7F1D51175A00CCB3D9 /* Frameworks */,
+				96752B801D51175A00CCB3D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LHL-June.StretchMyHeader";
+			productName = "LHL-June.StretchMyHeader";
+			productReference = 96752B821D51175A00CCB3D9 /* LHL-June.StretchMyHeader.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		96752B7A1D51175A00CCB3D9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Asuka Nakagawa";
+				TargetAttributes = {
+					96752B811D51175A00CCB3D9 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 6A3B9S8TK9;
+					};
+				};
+			};
+			buildConfigurationList = 96752B7D1D51175A00CCB3D9 /* Build configuration list for PBXProject "LHL-June.StretchMyHeader" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 96752B791D51175A00CCB3D9;
+			productRefGroup = 96752B831D51175A00CCB3D9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				96752B811D51175A00CCB3D9 /* LHL-June.StretchMyHeader */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		96752B801D51175A00CCB3D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96752B921D51175A00CCB3D9 /* LaunchScreen.storyboard in Resources */,
+				96752B8F1D51175A00CCB3D9 /* Assets.xcassets in Resources */,
+				96752B8D1D51175A00CCB3D9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96752B7E1D51175A00CCB3D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96752B8A1D51175A00CCB3D9 /* DetailViewController.swift in Sources */,
+				96752B881D51175A00CCB3D9 /* MasterViewController.swift in Sources */,
+				96752B9A1D51177700CCB3D9 /* NewsTableViewCell.swift in Sources */,
+				96752B9C1D511ADB00CCB3D9 /* News.swift in Sources */,
+				96752B861D51175A00CCB3D9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		96752B8B1D51175A00CCB3D9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96752B8C1D51175A00CCB3D9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		96752B901D51175A00CCB3D9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96752B911D51175A00CCB3D9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		96752B941D51175A00CCB3D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		96752B951D51175A00CCB3D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		96752B971D51175A00CCB3D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "LHL-June.StretchMyHeader/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "A.LHL-June-StretchMyHeader";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		96752B981D51175A00CCB3D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "LHL-June.StretchMyHeader/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "A.LHL-June-StretchMyHeader";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		96752B7D1D51175A00CCB3D9 /* Build configuration list for PBXProject "LHL-June.StretchMyHeader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96752B941D51175A00CCB3D9 /* Debug */,
+				96752B951D51175A00CCB3D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96752B961D51175A00CCB3D9 /* Build configuration list for PBXNativeTarget "LHL-June.StretchMyHeader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96752B971D51175A00CCB3D9 /* Debug */,
+				96752B981D51175A00CCB3D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 96752B7A1D51175A00CCB3D9 /* Project object */;
+}
