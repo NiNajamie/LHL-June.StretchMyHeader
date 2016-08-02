@@ -13,6 +13,7 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var headlineLabel: UILabel!
     
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

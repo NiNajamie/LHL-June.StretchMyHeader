@@ -10,19 +10,22 @@ import UIKit
 
 class MasterViewController: UITableViewController {
 
+    @IBOutlet weak var currentDateLabel: UILabel!
     
     var newsList = [News]()
     
     func loadNews() {
         let news1 = News(category: .World, headline: "Climate change protests, divestments meet fossil fuels realities.")
         let news2 = News(category: .Europe, headline: "Scotland's 'Yes' leader says independence vote is 'once in a lifetime")
-        let news3 = News(category: .Africa, headline: "Climate change protests, divestments meet fossil fuels realities")
-        let news4 = News(category: .MiddleEast, headline: "Climate change protests, divestments meet fossil fuels realities")
-        let news5 = News(category: .World, headline: "Climate change protests, divestments meet fossil fuels realities")
+        let news3 = News(category: .MiddleEast, headline: "Airstrikes boost Islamic State, FBI director warns more hostages possible")
+        let news4 = News(category: .Africa, headline: "Nigeria says 70 dead in building collapse; questions S. Africa victim claim")
+        let news5 = News(category: .AsiaPacific, headline: "Despite UN ruling, Japan seeks backing for whale hunting")
+        let news6 = News(category: .Americas, headline: "Officials: FBI is tracking 100 Americans who fought alongside IS in Syria")
+        let news7 = News(category: .World, headline: "South Africa in $40 billion deal for Russian nuclear reactors")
+        let news8 = News(category: .Europe, headline: "'One million babies' created by EU student exchanges")
+        //        news1.category.color()
         
-//        news1.category.color()
-        
-        newsList = [news1, news2, news3, news4, news5]
+        newsList = [news1, news2, news3, news4, news5, news6, news7, news8]
     }
     
     
@@ -35,12 +38,22 @@ class MasterViewController: UITableViewController {
         super.viewDidLoad()
         
         loadNews()
+
+        let currentDate = NSDate()
+        let formatter = NSDateFormatter()
+        formatter.locale = NSLocale.currentLocale()
+        formatter.dateStyle = NSDateFormatterStyle.LongStyle
+        let converttedDate = formatter.stringFromDate(currentDate)
+
+        currentDateLabel.text = converttedDate
+        
+        
         
         // Do any additional setup after loading the view, typically from a nib.
-        self.navigationItem.leftBarButtonItem = self.editButtonItem()
-
-        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(insertNewObject))
-        self.navigationItem.rightBarButtonItem = addButton
+//        self.navigationItem.leftBarButtonItem = self.editButtonItem()
+//
+//        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(insertNewObject))
+//        self.navigationItem.rightBarButtonItem = addButton
         
         self.tableView.estimatedRowHeight = 88
         self.tableView.rowHeight = UITableViewAutomaticDimension
@@ -56,6 +69,7 @@ class MasterViewController: UITableViewController {
     }
 
     func insertNewObject(sender: AnyObject) {
+        
         objects.insert(NSDate(), atIndex: 0)
         let indexPath = NSIndexPath(forRow: 0, inSection: 0)
         self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
@@ -112,7 +126,5 @@ class MasterViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
     }
-
-
 }
 

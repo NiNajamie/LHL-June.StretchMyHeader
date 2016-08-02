@@ -299,6 +299,7 @@
 				96752B981D51175A00CCB3D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

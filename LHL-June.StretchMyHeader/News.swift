@@ -34,7 +34,7 @@ struct News {
             case .Europe:
                 return UIColor.greenColor()
             case .MiddleEast:
-                return UIColor.magentaColor()
+                return UIColor.yellowColor()
             case .Africa:
                 return UIColor.orangeColor()
             default:
