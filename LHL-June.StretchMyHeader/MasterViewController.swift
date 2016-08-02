@@ -14,10 +14,15 @@ class MasterViewController: UITableViewController {
     var newsList = [News]()
     
     func loadNews() {
-        let news1 = News(category: "World", headline: "Climate change protests, divestments meet fossil fuels realities")
-        let news2 = News(category: "Europe", headline: "Climate change protests, divestments meet fossil fuels realities")
+        let news1 = News(category: .World, headline: "Climate change protests, divestments meet fossil fuels realities.")
+        let news2 = News(category: .Europe, headline: "Scotland's 'Yes' leader says independence vote is 'once in a lifetime")
+        let news3 = News(category: .Africa, headline: "Climate change protests, divestments meet fossil fuels realities")
+        let news4 = News(category: .MiddleEast, headline: "Climate change protests, divestments meet fossil fuels realities")
+        let news5 = News(category: .World, headline: "Climate change protests, divestments meet fossil fuels realities")
         
-        newsList = [news1!, news2!]
+//        news1.category.color()
+        
+        newsList = [news1, news2, news3, news4, news5]
     }
     
     
@@ -34,8 +39,11 @@ class MasterViewController: UITableViewController {
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
 
-        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
+        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(insertNewObject))
         self.navigationItem.rightBarButtonItem = addButton
+        
+        self.tableView.estimatedRowHeight = 88
+        self.tableView.rowHeight = UITableViewAutomaticDimension
         
     }
 
@@ -78,9 +86,12 @@ class MasterViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! NewsTableViewCell
+        
+//        let category = News.Category(rawValue: "Asia Pacidsjfhsdkafic")
 
         let news = newsList[indexPath.row]
-        cell.categoryLabel.text = news.category
+        cell.categoryLabel.text = news.category.rawValue
+        cell.categoryLabel.textColor = news.category.color()
         cell.headlineLabel.text = news.headline
         
 //        let object = objects[indexPath.row] as! NSDate

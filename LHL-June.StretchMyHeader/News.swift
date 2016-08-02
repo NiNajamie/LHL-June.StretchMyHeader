@@ -8,14 +8,43 @@
 
 import UIKit
 
-class News: NSObject {
-
-    // Properties
-    var category: String
-    var headline: String
+// struct: it comes with the initializer automatically
+struct News {
+    let category: Category
+    let headline: String
     
-    init? (category: String, headline: String) {
-        self.category = category
-        self.headline = headline
+    
+    
+    // Key:enum Value:String(rawValue)
+    enum Category: String {
+        case World = "World"
+        case Americas = "Americas"
+        case Europe = "Europe"
+        case MiddleEast = "Middle East"
+        case Africa = "Africa"
+        case AsiaPacific = "Asia Pacific"
+        
+        // self = colorForCategory
+        func color() -> UIColor {
+            switch self {
+            case .World:
+                return UIColor.redColor()
+            case .Americas:
+                return UIColor.blueColor()
+            case .Europe:
+                return UIColor.greenColor()
+            case .MiddleEast:
+                return UIColor.magentaColor()
+            case .Africa:
+                return UIColor.orangeColor()
+            default:
+                return UIColor.purpleColor()
+            }
+        }
     }
 }
+
+//item.colorForCategory()
+//item.category.color()
+
+
