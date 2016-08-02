@@ -11,6 +11,9 @@ import UIKit
 class MasterViewController: UITableViewController {
 
     @IBOutlet weak var currentDateLabel: UILabel!
+    @IBOutlet weak var headerView: UIView!
+    
+    let kTableHeaderHeight: CGFloat = 282.0
     
     var newsList = [News]()
     
@@ -23,7 +26,6 @@ class MasterViewController: UITableViewController {
         let news6 = News(category: .Americas, headline: "Officials: FBI is tracking 100 Americans who fought alongside IS in Syria")
         let news7 = News(category: .World, headline: "South Africa in $40 billion deal for Russian nuclear reactors")
         let news8 = News(category: .Europe, headline: "'One million babies' created by EU student exchanges")
-        //        news1.category.color()
         
         newsList = [news1, news2, news3, news4, news5, news6, news7, news8]
     }
@@ -47,8 +49,6 @@ class MasterViewController: UITableViewController {
 
         currentDateLabel.text = converttedDate
         
-        
-        
         // Do any additional setup after loading the view, typically from a nib.
 //        self.navigationItem.leftBarButtonItem = self.editButtonItem()
 //
@@ -58,8 +58,28 @@ class MasterViewController: UITableViewController {
         self.tableView.estimatedRowHeight = 88
         self.tableView.rowHeight = UITableViewAutomaticDimension
         
+        self.tableView.tableHeaderView = nil
+        self.tableView.addSubview(headerView)
+        
+        tableView.contentInset = UIEdgeInsetsMake(kTableHeaderHeight, 0.0, 0.0, 0.0)
+        tableView.contentOffset = CGPointMake(0.0, -kTableHeaderHeight)
+        updateHeaderView()
+    }
+    
+    override func scrollViewDidScroll(scrollView: UIScrollView) {
+        updateHeaderView()
     }
 
+    
+    func updateHeaderView() {
+        var headerRect = CGRectMake(0.0, -kTableHeaderHeight, tableView.bounds.width, kTableHeaderHeight)
+        if tableView.contentOffset.y < -kTableHeaderHeight {
+            headerRect.origin.y = tableView.contentOffset.y
+            headerRect.size.height = -(tableView.contentOffset.y)
+        }
+        headerView.frame = headerRect
+    }
+    
     override func viewWillAppear(animated: Bool) {
     }
 
@@ -80,7 +100,7 @@ class MasterViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
-                let object = objects[indexPath.row] as! NSDate
+                let object = newsList[indexPath.row]
                 let controller = segue.destinationViewController as! DetailViewController
                 controller.detailItem = object
             }

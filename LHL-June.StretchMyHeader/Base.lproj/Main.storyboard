@@ -140,6 +140,7 @@
                     <navigationItem key="navigationItem" title="Master" id="Zdf-7t-Un8"/>
                     <connections>
                         <outlet property="currentDateLabel" destination="9cI-VA-LZ9" id="mZo-1k-yDz"/>
+                        <outlet property="headerView" destination="B0F-sx-ycx" id="u1M-Mx-2OQ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
