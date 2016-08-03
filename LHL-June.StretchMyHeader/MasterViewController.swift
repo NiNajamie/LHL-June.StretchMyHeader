@@ -8,12 +8,17 @@
 
 import UIKit
 
+var headerMaskLayer = CAShapeLayer()
+
+
+// UIScrollViewDelegate
 class MasterViewController: UITableViewController {
 
     @IBOutlet weak var currentDateLabel: UILabel!
     @IBOutlet weak var headerView: UIView!
     
     let kTableHeaderHeight: CGFloat = 282.0
+    let kTableHeaderCutAway: CGFloat = 80.0
     
     var newsList = [News]()
     
@@ -40,7 +45,12 @@ class MasterViewController: UITableViewController {
         super.viewDidLoad()
         
         loadNews()
-
+        
+        headerMaskLayer = CAShapeLayer()
+        headerMaskLayer.fillColor = UIColor.redColor().CGColor
+        headerView.layer.mask = headerMaskLayer
+        
+        
         let currentDate = NSDate()
         let formatter = NSDateFormatter()
         formatter.locale = NSLocale.currentLocale()
@@ -49,7 +59,10 @@ class MasterViewController: UITableViewController {
 
         currentDateLabel.text = converttedDate
         
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        
+        
 //        self.navigationItem.leftBarButtonItem = self.editButtonItem()
 //
 //        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(insertNewObject))
@@ -60,24 +73,38 @@ class MasterViewController: UITableViewController {
         
         self.tableView.tableHeaderView = nil
         self.tableView.addSubview(headerView)
-        
-        tableView.contentInset = UIEdgeInsetsMake(kTableHeaderHeight, 0.0, 0.0, 0.0)
-        tableView.contentOffset = CGPointMake(0.0, -kTableHeaderHeight)
+
+        let effectiveHeight = kTableHeaderHeight - kTableHeaderCutAway/2
+        tableView.contentInset = UIEdgeInsetsMake(effectiveHeight, 0.0, 0.0, 0.0)
+        tableView.contentOffset = CGPointMake(0.0, -effectiveHeight)
         updateHeaderView()
+        
     }
     
     override func scrollViewDidScroll(scrollView: UIScrollView) {
         updateHeaderView()
     }
-
+    
+    // MARK: - Update HeaderView
     
     func updateHeaderView() {
+//        let effectiveHeight = kTableHeaderHeight - kTableHeaderCutAway/2
         var headerRect = CGRectMake(0.0, -kTableHeaderHeight, tableView.bounds.width, kTableHeaderHeight)
         if tableView.contentOffset.y < -kTableHeaderHeight {
             headerRect.origin.y = tableView.contentOffset.y
             headerRect.size.height = -(tableView.contentOffset.y)
         }
         headerView.frame = headerRect
+        
+        
+        // Cutting the cut-away
+        let path = UIBezierPath()
+        path.moveToPoint(CGPointMake(0, 0))
+        path.addLineToPoint(CGPointMake(headerRect.width, 0))
+        path.addLineToPoint(CGPointMake(headerRect.width, headerRect.height))
+        path.addLineToPoint(CGPointMake(0, headerRect.height - kTableHeaderCutAway))
+        headerMaskLayer.path = path.CGPath
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -128,8 +155,7 @@ class MasterViewController: UITableViewController {
         cell.categoryLabel.textColor = news.category.color()
         cell.headlineLabel.text = news.headline
         
-//        let object = objects[indexPath.row] as! NSDate
-//        cell.textLabel!.text = object.description
+
         return cell
     }
 
